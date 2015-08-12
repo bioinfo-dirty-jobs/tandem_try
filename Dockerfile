@@ -15,7 +15,7 @@ RUN  apt-get install wget -y
 RUN cd /opt && \
     wget -c -P /opt/pear http://sco.h-its.org/exelixis/web/software/pear/files/pear-0.9.6-bin-64.tar.gz && \
     tar -xzf /opt/pear/pear-0.9.6-bin-64.tar.gz -C /opt/pear/  
-RUN apt-get update && apt-get install build-essential libssl-dev libcurl4-gnutls-dev libexpat1-dev gettext unzip
+RUN apt-get update && apt-get install build-essential -y  libssl-dev libcurl4-gnutls-dev libexpat1-dev gettext unzip
 
 RUN  apt-get install git -y 
 RUN cd /opt/ && git clone https://github.com/mafouille/doMreps
