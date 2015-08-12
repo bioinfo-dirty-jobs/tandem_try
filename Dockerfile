@@ -15,9 +15,9 @@ RUN  apt-get install wget -y
 RUN cd /opt && \
     wget -c -P /opt/pear http://sco.h-its.org/exelixis/web/software/pear/files/pear-0.9.6-bin-64.tar.gz && \
     tar -xzf /opt/pear/pear-0.9.6-bin-64.tar.gz -C /opt/pear/  
-RUN apt-get update && apt-get upgrade -y  
+RUN apt-get update && apt-get -y upgrade 
 
-RUN  apt-get install git -y 
+RUN  apt-get install -y  git 
 RUN cd /opt/ && git clone https://github.com/mafouille/doMreps
 #---------------------------------------------------------------------
 
@@ -27,8 +27,8 @@ CMD ["/bin/bash"]
 RUN  apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     apt-get autoclean && \
- #   apt-get autoremove -y && \
-  #  rm -rf /var/lib/{apt,dpkg,cache,log}/
+    apt-get autoremove -y && \
+   rm -rf /var/lib/{apt,dpkg,cache,log}/
     
 #Add star to PATH
 ENV PATH /opt/pear/pear-0.9.6-bin-64/:$PATH
