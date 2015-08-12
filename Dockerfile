@@ -16,7 +16,8 @@ RUN cd /opt && \
     wget -c -P /opt/pear http://sco.h-its.org/exelixis/web/software/pear/files/pear-0.9.6-bin-64.tar.gz && \
     tar -xzf /opt/pear/pear-0.9.6-bin-64.tar.gz -C /opt/pear/  
 RUN apt-get update && apt-get -y -f upgrade 
-RUN  apt-get install -y  git 
+RUN apt-get update && apt-get install -y git
+
 RUN cd /opt/ && git clone https://github.com/mafouille/doMreps
 #---------------------------------------------------------------------
 
