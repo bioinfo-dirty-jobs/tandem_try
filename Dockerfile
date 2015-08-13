@@ -18,8 +18,7 @@ RUN cd /opt && \
 
 RUN apt-get install -y build-essential
 RUN apt-get install -y python
-RUN cd /opt/ && wget -O doMreps.zip https://github.com/mafouille/doMreps/archive/master.zip && unzip  doMreps.zip && 
-rm doMreps.zip
+RUN cd /opt/ && wget -O doMreps.zip https://github.com/mafouille/doMreps/archive/master.zip && unzip  doMreps.zip && rm doMreps.zip
 
 #---------------------------------------------------------------------
 
