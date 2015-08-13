@@ -7,7 +7,7 @@ MAINTAINER  Maurizio Polano "mauriziopolano@blu.it"
 
 # update system
 RUN apt-get update &&  apt-get upgrade -y && apt-get dist-upgrade -y 
-
+RUN apt-get install unzip
 RUN  apt-get install wget -y
 #--------------pear preparation ----------------------------------------------------------------------------------------------#
 
