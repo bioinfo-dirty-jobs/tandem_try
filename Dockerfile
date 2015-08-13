@@ -18,7 +18,8 @@ RUN cd /opt && \
 
 RUN apt-get install -y build-essential
 RUN apt-get install -y python
-RUN cd /opt/ && wget -O doMreps.zip https://github.com/mafouille/doMreps/archive/master.zip && unzip  doMreps.zip
+RUN cd /opt/ && wget -O doMreps.zip https://github.com/mafouille/doMreps/archive/master.zip && unzip  doMreps.zip && 
+rm doMreps.zip
 
 #---------------------------------------------------------------------
 
@@ -33,4 +34,4 @@ RUN  apt-get clean && \
     
 #Add star to PATH
 ENV PATH /opt/pear/pear-0.9.6-bin-64/:$PATH
-ENV PATH /opt/doMreps/:$PATH
+ENV PATH /opt/doMreps-master/:$PATH
